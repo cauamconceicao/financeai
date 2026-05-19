@@ -90,7 +90,9 @@ export default function FinancialChat() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: text,
-          context: financialData || {},
+          transactions: financialData?.transactions || [],
+          balance: financialData?.balance || 0,
+          currency: 'BRL',
         }),
       })
 
