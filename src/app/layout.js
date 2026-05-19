@@ -2,6 +2,7 @@ import { Geist } from 'next/font/google'
 import './globals.css'
 import Providers from '@/components/Providers'
 import Navbar from '@/components/Navbar'
+import FinancialChat from '@/components/FinancialChat'
 
 const geist = Geist({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
+          <FinancialChat />
         </Providers>
       </body>
     </html>
